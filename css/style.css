@@ -124,6 +124,9 @@ img {
   color: var(--font-secondary-color);
 
   background-color: var(--bgc-secondary);
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -133,12 +136,18 @@ img {
     0px 3px 1px rgba(0, 0, 0, 0.1);
 
   background-color: var(--font-active-element);
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header {
   border-bottom: 1px solid #ececec;
 }
 
+.header--no-border {
+  border: 0px;
+}
 /* Logo css options */
 .logo {
   font-family: "Raleway", sans-serif;
@@ -186,11 +195,17 @@ img {
   line-height: 16px;
   letter-spacing: 0.02em;
   color: var(--font-secondary-color);
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu .menu-link:hover,
 .menu .menu-link:focus {
   color: var(--font-active-element);
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link.active {
@@ -226,16 +241,6 @@ img {
   align-items: center;
 }
 
-.nav-contact__email {
-  display: flex;
-  margin-right: 30px;
-  align-items: center;
-}
-.nav-contact__tel {
-  display: flex;
-  align-items: center;
-}
-
 .header .contact {
   display: flex;
   align-items: center;
@@ -254,14 +259,36 @@ img {
   fill: currentColor;
 }
 
+.nav-contact__email {
+  display: flex;
+  margin-right: 30px;
+  align-items: center;
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-contact__tel {
+  display: flex;
+  align-items: center;
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .nav-contact__email > .contact:hover,
 .nav-contact__email > .contact:focus {
   color: var(--font-active-element);
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-contact__tel > .contact:hover,
 .nav-contact__tel > .contact:focus {
   color: var(--font-active-element);
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Hero css options*/
@@ -370,7 +397,20 @@ img {
   margin-right: 30px;
 }
 
+.card-product {
+  position: relative;
+}
+
 .products-title {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -378,8 +418,7 @@ img {
   text-align: center;
   text-transform: uppercase;
 
-  /* for example bgc */
-  background-color: var(--bgc-footer);
+  background: rgba(47, 48, 58, 0.8);
 }
 
 /* Team css options */
@@ -449,16 +488,20 @@ img {
 
   color: var(--font-primary-color);
   fill: currentColor;
-
   background-color: var(--bgc-primary);
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-team-social:hover,
 .icon-team-social:focus {
   color: var(--font-third-color);
   fill: currentColor;
-
   background-color: var(--font-active-element);
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Clients */
@@ -481,12 +524,18 @@ img {
   border-radius: 4px;
   color: var(--font-primary-color);
   fill: currentColor;
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon-box:hover,
 .clients-icon-box:focus {
   border: 1px solid var(--font-active-element);
   color: var(--font-active-element);
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Footer general css options */
@@ -556,12 +605,17 @@ img {
 
   border-radius: 50%;
   color: var(--font-primary-color);
-
   background-color: var(--font-primary-color);
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-social:hover {
   background-color: var(--font-active-element);
+
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-social > .instagram,
@@ -610,6 +664,8 @@ img {
 .portfolio .item {
   width: 370px;
   margin: 15px;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   /* 
   border-top-left-radius: 5px;
@@ -618,10 +674,45 @@ img {
   */
 }
 
+.card__description {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(0, 100%);
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--bgc-primary);
+  background-color: rgb(33, 150, 243);
+
+  opacity: 0;
+  transition: 250ms;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio > .item:hover .card__description,
+.portfolio > .item:focus .card__description {
+  opacity: 0.9;
+  transform: translate(0, 0);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio .item:hover,
 .portfolio .item:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-image {
+  position: relative;
 }
 
 .card-content {
@@ -659,6 +750,5 @@ img {
   font-size: 18px;
   line-height: 1.56;
   color: var(--font-third-color);
-
   background-color: var(--bgc-card-description);
 }
