@@ -61,11 +61,8 @@ img {
 }
 
 /* delete underline from the link */
-.link {
-  text-decoration: none;
-}
-
 .logo--no-link,
+.vrt-button--no-link,
 .address__email--no-link,
 .address__tel--no-link,
 .menu__link--no-link,
@@ -85,14 +82,19 @@ img {
 .nav-contact--no-list,
 .footer-social--no-list,
 .filter--no-list,
-.portfolio__list--no-list {
+.portfolio__list--no-list,
+.team__list--no-list,
+.team__social-net--no-list,
+.client__list--no-list,
+.feature__list--no-list,
+.product__list--no-list {
   list-style: none;
   padding: 0px;
 }
 
 /* hide the item */
-.hiden,
-.title--hiden {
+.portfolio__title--hiden,
+.feature__title--hiden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -315,12 +317,12 @@ img {
   background-color: var(--bgc-footer);
 }
 
-.hero .hero-box {
+.hero__box {
   width: 710px;
   text-align: center;
 }
 
-.hero-title {
+.hero__title {
   margin-top: 0px;
   margin-bottom: 45px;
 
@@ -334,12 +336,20 @@ img {
 }
 
 /* Sections css options*/
-.section {
+.feature--section,
+.product--section,
+.team--section,
+.client--section,
+.portfolio--section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.section .title {
+.feature__title,
+.products__title,
+.team__title,
+.client__title,
+.portfolio__title {
   margin-bottom: 50px;
 
   font-weight: 700;
@@ -350,15 +360,15 @@ img {
 }
 
 /* Feature css options */
-.feature {
+.feature__list {
   display: flex;
 }
 
-.feature .item {
+.feature__item {
   width: 270px;
 }
 
-.feature > .item:not(:last-child) {
+.feature__item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -374,7 +384,7 @@ img {
   background-color: var(--bgc-secondary);
 }
 
-.feature-title {
+.feature__title {
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -385,26 +395,19 @@ img {
 }
 
 /* Product css options */
-.products {
+.product__list {
   display: flex;
 }
 
-/* 
-.products > .item {
-  border-radius: 4px;
-  overflow: hidden; 
-}
-*/
-
-.products > .item:not(:last-child) {
+.product__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.card-product {
+.product__box {
   position: relative;
 }
 
-.products-title {
+.product__title {
   position: absolute;
   width: 100%;
   height: 70px;
@@ -425,35 +428,31 @@ img {
 }
 
 /* Team css options */
-.team-bgc {
+.team--bgc {
   background-color: var(--bgc-secondary);
 }
 
-.team {
+.team__list {
   display: flex;
 }
 
-.team > .team-member {
-  /* 
-  border-radius: 4px;
-  overflow: hidden; 
-  */
+.team__member {
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-.team > .team-member:not(:last-child) {
+.team__member:not(:last-child) {
   margin-right: 30px;
 }
 
-.team-description {
+.team__description {
   padding-top: 30px;
   padding-bottom: 24px;
 
   background-color: var(--bgc-primary);
 }
 
-.team-title {
+.team__name {
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -463,7 +462,7 @@ img {
   color: var(--font-secondary-color);
 }
 
-.team-position {
+.team__position {
   margin-bottom: 16px;
 
   font-size: 16px;
@@ -472,16 +471,16 @@ img {
   color: var(--font-primary-color);
 }
 
-.team-social {
+.team__social-net {
   display: flex;
   justify-content: center;
 }
 
-.team-social .item:not(:last-child) {
+.team__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.icon-team-social {
+.team__social-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -497,23 +496,23 @@ img {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-team-social:hover,
-.icon-team-social:focus {
+.team__social-icon:hover,
+.team__social-icon:focus {
   fill: currentColor;
   color: var(--font-third-color);
   background-color: var(--font-active-element);
 }
 
 /* Clients */
-.clients {
+.client__list {
   display: flex;
 }
 
-.clients .item:not(:last-child) {
+.client__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.clients-icon-box {
+.client__link {
   display: flex;
   width: 170px;
   height: 90px;
@@ -529,8 +528,8 @@ img {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-icon-box:hover,
-.clients-icon-box:focus {
+.client__link:hover,
+.client__link:focus {
   color: var(--font-active-element);
   border: 1px solid var(--font-active-element);
 }
