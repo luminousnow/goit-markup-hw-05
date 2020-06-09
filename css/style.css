@@ -672,12 +672,10 @@ img {
 }
 
 .card__description {
-  display: block;
-  width: 100%;
-  height: 100%;
   position: absolute;
-  left: 0px;
-  bottom: 0px;
+  display: block;
+  height: 100%;
+  bottom: 0;
   padding: 63px 24px;
 
   font-size: 18px;
@@ -686,10 +684,8 @@ img {
   background-color: var(--bgc-card-description);
 
   transform: translate(0, 100%);
-
   /* delay 250ms */
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .card__link:hover .card__description,
