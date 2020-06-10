@@ -131,6 +131,35 @@ img {
   background-color: var(--bgc-button);
 }
 
+/* Footer button */
+.join__btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 29px;
+
+  border-style: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: left;
+  letter-spacing: 0.06em;
+  color: var(--font-third-color);
+  background-color: var(--bgc-button);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.join__btn::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-color: var(--font-third-color);
+}
+
 /* Filter button css options*/
 .filter__button {
   padding: 6px 22px;
@@ -546,7 +575,7 @@ img {
 }
 
 /* Footer general css options */
-.footer-content {
+.footer__content {
   display: flex;
   align-items: baseline;
   padding-bottom: 28px;
@@ -619,7 +648,7 @@ img {
   fill: var(--font-third-color);
 }
 
-.join-title {
+.join__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -675,6 +704,7 @@ img {
   position: absolute;
   display: block;
   height: 100%;
+  left: 0;
   bottom: 0;
   padding: 63px 24px;
 
