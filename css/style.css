@@ -149,6 +149,7 @@ img {
   background-color: var(--bgc-button);
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 .join__btn::after {
@@ -649,10 +650,31 @@ img {
 }
 
 .join__title {
+  margin-bottom: 20px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
+
+.join__conteiner {
+  display: inline-flex;
+}
+
+.join__email {
+  margin-right: 12px;
+  padding: 0px 12px;
+  width: 358px;
+
+  color: var(--font-ftr-contact);
+  background-color: var(--bgc-footer);
+  font-size: 16px;
+  line-height: 1.87;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer copiright css options */
